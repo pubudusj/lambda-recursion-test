@@ -12,5 +12,5 @@ def event_handler(event, _context):
 
         client.send_message(
             QueueUrl=sqs_queue,
-            MessageBody=json.dumps({"hello": "world"}),
+            MessageBody=record["body"],
         )

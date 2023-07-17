@@ -56,4 +56,5 @@ class LambdaRecursionTestStack(Stack):
 
         # Output
         CfnOutput(self, "SQSQueue", value=queue.queue_arn)
+        CfnOutput(self, "DLQueue", value=dlq.queue_arn)
         CfnOutput(self, "LambdaFunction", value=lambda_function.function_arn)
